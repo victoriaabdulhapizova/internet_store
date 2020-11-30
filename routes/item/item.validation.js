@@ -3,9 +3,10 @@ const Joi = require('@hapi/joi');
 module.exports = {
   filter: Joi.object({
     brands: Joi
-      .array().items(Joi
-        .number()
-        .required()),
+      .array()
+      .items(
+        Joi.number()
+      ).required(),
   }),
   add: Joi.object({
     name: Joi
