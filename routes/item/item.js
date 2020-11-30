@@ -8,8 +8,9 @@ const validateWrap = require('../../utils/validation');
 
 router.route('/')
   .get(recordItems.getData)
-  .post(validateWrap([validation.add, ['body']], recordItems.add))
-  .post(validateWrap([validation.filter, ['body']], recordItems.filterData));
+  .post(validateWrap([validation.add, ['body']], recordItems.add));
+
+router.get('/filter', validateWrap([validation.filter, ['query']], recordItems.filterData));
 
 router.route('/:itemId')
   .patch(validateWrap([validation.update, ['body', 'params']], recordItems.update))
