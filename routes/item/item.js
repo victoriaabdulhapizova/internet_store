@@ -10,7 +10,7 @@ router.route('/')
   .get(recordItems.getData)
   .post(validateWrap([validation.add, ['body']], recordItems.add));
 
-router.get('/filter', validateWrap([validation.filter, ['body']], recordItems.filterData));
+router.post('/filter', validateWrap([validation.filter, ['body']], recordItems.filterData));
 
 router.route('/:itemId')
   .patch(validateWrap([validation.update, ['body', 'params']], recordItems.update))
