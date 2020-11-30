@@ -9,8 +9,7 @@ module.exports = {
       .number()
       .required(),
     userId: Joi
-      .string()
-      .regex(/^\d+$/)
+      .number()
       .required(),
   }),
 
