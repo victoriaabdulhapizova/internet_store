@@ -43,7 +43,7 @@ module.exports = {
   async add(req, res) {
     try {
       const {
-        name, brandId, price, purchaseId, filename,
+        name, brandId, price, purchaseId, fileLink,
       } = req.body;
       const existItem = await queryBrand.findBrand(brandId);
 
@@ -53,7 +53,7 @@ module.exports = {
 
       if (!existPurchase) return res.status(404).send('Purchase not found');
 
-      const item = await query.addItem(name, brandId, price, purchaseId, filename);
+      const item = await query.addItem(name, brandId, price, purchaseId, fileLink);
 
       return res.status(200).send(item);
     }

@@ -17,12 +17,12 @@ module.exports = {
     return Item.findByPk(id);
   },
 
-  addItem(name, brandId, price, purchaseId, filename) {
+  addItem(name, brandId, price, purchaseId, fileLink) {
     return Item.create({
       name,
       brandId,
       price,
-      logo: filename,
+      logo: fileLink,
       purchaseId,
     });
   },

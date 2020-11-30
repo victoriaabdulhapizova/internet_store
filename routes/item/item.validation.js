@@ -17,14 +17,12 @@ module.exports = {
       .number()
       .required(),
     brandId: Joi
-      .string()
-      .regex(/^\d+$/)
+      .number()
       .required(),
     purchaseId: Joi
-      .string()
-      .regex(/^\d+$/)
+      .number()
       .required(),
-    filename: Joi
+    fileLink: Joi
       .required(),
   }),
 

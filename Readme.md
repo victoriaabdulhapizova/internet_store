@@ -41,12 +41,12 @@
 ##### Method: GET URL: http://localhost:3000/api/v1/purchase/:purchaseId
 ##### Method: GET URL: http://localhost:3000/api/v1/purchase 
 ##### Method: POST URL: http://localhost:3000/api/v1/purchase {category, amount, userId}
-##### Method: PATCH URL: http://localhost:3000/api/v1/purchase/:purchaseId {category, amount, purchaseId}
-##### Method: GET URL: http://localhost:3000/api/v1/purchase/:purchaseId {id}
+##### Method: PATCH URL: http://localhost:3000/api/v1/purchase/:purchaseId {category, amount}
+##### Method: DELETE URL: http://localhost:3000/api/v1/purchase/:purchaseId {id}
 
 ## Items
 ##### Method: GET URL: http://localhost:3000/api/v1/item/:itemId
 ##### Method: GET URL: http://localhost:3000/api/v1/item 
-##### Method: POST URL: http://localhost:3000/api/v1/item {name, price, brandId, purchaseId, filename}
+##### Method: POST URL: http://localhost:3000/api/v1/item {name, price, brandId, purchaseId, fileLink}
 ##### Method: PATCH URL: http://localhost:3000/api/v1/item/:purchaseId {name, price, id}
-##### Method: GET URL: http://localhost:3000/api/v1/item/:purchaseId {id}
+##### Method: DELETE URL: http://localhost:3000/api/v1/item/:purchaseId {id}
