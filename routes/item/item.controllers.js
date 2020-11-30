@@ -28,7 +28,7 @@ module.exports = {
   },
   async filterData(req, res) {
     try {
-      const { brands, } = req.query;
+      const { brands, } = req.body;
       const item = await query.filterItems(brands);
 
       if (!item) return res.sendStatus(404).send('Brand not found');
