@@ -1,4 +1,5 @@
 const { Item, } = require('../../models');
+const { Op, } = require("sequelize");
 
 module.exports = {
 
@@ -11,6 +12,14 @@ module.exports = {
 
   findItem(brandId) {
     return Item.findByPk(brandId);
+  },
+
+  filterItems(brands) {
+    return Item.findAll({
+      where: {
+        [Op.in]: brands,
+      },
+    });
   },
 
   findPurchase(id) {

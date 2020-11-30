@@ -2,13 +2,11 @@ const Joi = require('@hapi/joi');
 
 module.exports = {
   filter: Joi.object({
-    brandsId: Joi
+    brands: Joi
       .array().items(Joi
-        .string()
-        .regex(/^\d+$/))
-      .required(),
+        .number()
+        .required()),
   }),
-
   add: Joi.object({
     name: Joi
       .string()

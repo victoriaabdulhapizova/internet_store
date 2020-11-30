@@ -50,4 +50,4 @@
 ##### Method: POST URL: http://localhost:3000/api/v1/item {name, price, brandId, purchaseId, fileLink}
 ##### Method: PATCH URL: http://localhost:3000/api/v1/item/:itemId {name, price, fileLink}
 ##### Method: DELETE URL: http://localhost:3000/api/v1/item/:itemId
-##### Method: GET URL: http://localhost:3000/api/v1/item/filter?brandId=
+##### Method: GET URL: http://localhost:3000/api/v1/item/filter?brands= (array of brands id)
