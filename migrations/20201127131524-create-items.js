@@ -15,7 +15,7 @@ module.exports = {
           model: { tableName: 'Purchases', },
           key: 'id',
         },
-        onDelete: 'RESTRICT',
+        onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       },
       brandId: {
@@ -26,7 +26,7 @@ module.exports = {
           model: { tableName: 'Brands', },
           key: 'id',
         },
-        onDelete: 'RESTRICT',
+        onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       },
       name: {

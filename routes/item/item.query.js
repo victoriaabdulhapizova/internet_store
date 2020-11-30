@@ -22,7 +22,7 @@ module.exports = {
       name,
       brandId,
       price,
-      image: filename,
+      logo: filename,
       purchaseId,
     });
   },

@@ -35,14 +35,14 @@ module.exports = {
     price: Joi
       .number()
       .required(),
-    id: Joi
+    itemId: Joi
       .string()
       .regex(/^\d+$/)
       .required(),
   }),
 
-  delete: Joi.object({
-    id: Joi
+  id: Joi.object({
+    itemId: Joi
       .string()
       .regex(/^\d+$/)
       .required(),

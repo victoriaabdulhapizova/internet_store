@@ -21,11 +21,10 @@ module.exports = {
     return Purchase.findByPk(id);
   },
 
-  updatePurchases(purchases, category, amount, userId) {
+  updatePurchases(purchases, category, amount) {
     return purchases.update({
       category,
       amount,
-      userId,
     });
   },
 

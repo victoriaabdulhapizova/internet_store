@@ -12,7 +12,20 @@ module.exports = {
       return res.status(500).send(error);
     }
   },
+  async getItem(req, res) {
+    try {
+      const { itemId, } = req.params;
 
+      const item = await query.findByPkItem(itemId);
+
+      if (!item) return res.status(404).send('Item not found');
+
+      return res.status(200).send(item);
+    }
+    catch (error) {
+      return res.status(500).send(error);
+    }
+  },
   async filterData(req, res) {
     try {
       const { brandId, } = req.body;
@@ -51,9 +64,9 @@ module.exports = {
 
   async update(req, res) {
     try {
-      const { id, } = req.params;
+      const { itemId, } = req.params;
       const { name, price, } = req.body;
-      const item = await query.findByPkItem(id);
+      const item = await query.findByPkItem(itemId);
 
       if (!item) return res.status(404).send('Item not found');
 
@@ -66,11 +79,10 @@ module.exports = {
     }
   },
 
-  async deleteRecord(req, res) {
+  async deleteItem(req, res) {
     try {
-      const { id, } = req.params;
-      const item = await query.findByPkItem(id);
-
+      const { itemId, } = req.params;
+      const item = await query.findByPkItem(itemId);
       if (!item) return res.status(404).send('Item not found');
 
       await item.destroy();

@@ -15,7 +15,7 @@ module.exports = {
           model: { tableName: 'Users', },
           key: 'id',
         },
-        onDelete: 'RESTRICT',
+        onDelete: 'CASCADE',
         onUpdate: 'CASCADE',
       },
       category: {

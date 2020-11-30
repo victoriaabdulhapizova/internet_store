@@ -11,8 +11,9 @@ router.route('/')
   .post(validateWrap([validation.add, ['body']], recordItems.add))
   .post(validateWrap([validation.filter, ['body']], recordItems.filterData));
 
-router.route('/:purchaseId')
+router.route('/:itemId')
   .patch(validateWrap([validation.update, ['body', 'params']], recordItems.update))
-  .get(validateWrap([validation.delete, ['params']], recordItems.deleteRecord));
+  .get(validateWrap([validation.id, ['params']], recordItems.getItem))
+  .delete(validateWrap([validation.id, ['params']], recordItems.deleteItem));
 
 module.exports = router;

@@ -39,8 +39,8 @@
 ## Purchases
 ##### Method: GET URL: http://localhost:3000/api/v1/purchase 
 ##### Method: POST URL: http://localhost:3000/api/v1/purchase {category, amount, userId}
-##### Method: PATCH URL: http://localhost:3000/api/v1/purchase/:userId {name, price, id}
-##### Method: GET URL: http://localhost:3000/api/v1/purchase/:userId {id}
+##### Method: PATCH URL: http://localhost:3000/api/v1/purchase/:purchaseId {name, price, id}
+##### Method: GET URL: http://localhost:3000/api/v1/purchase/:purchaseId {id}
 
 ## Items
 ##### Method: GET URL: http://localhost:3000/api/v1/item 

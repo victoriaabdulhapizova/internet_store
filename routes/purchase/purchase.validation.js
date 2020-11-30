@@ -15,20 +15,20 @@ module.exports = {
   }),
 
   update: Joi.object({
-    name: Joi
+    category: Joi
       .string()
       .required(),
-    price: Joi
+    amount: Joi
       .number()
       .required(),
-    id: Joi
+    purchaseId: Joi
       .string()
       .regex(/^\d+$/)
       .required(),
   }),
 
-  delete: Joi.object({
-    id: Joi
+  id: Joi.object({
+    purchaseId: Joi
       .string()
       .regex(/^\d+$/)
       .required(),
