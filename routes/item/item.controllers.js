@@ -31,7 +31,7 @@ module.exports = {
       const { brands, } = req.body;
       const items = await query.filterItems(brands);
 
-      if (!items.length) return res.sendStatus(404).send('Brand not found');
+      if (!items.length) return res.status(404).send('Brands not found');
 
       return res.send(items).status(200);
     }
