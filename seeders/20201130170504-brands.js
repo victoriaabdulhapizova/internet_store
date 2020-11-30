@@ -18,7 +18,7 @@ module.exports = {
         updatedAt: new Date().toISOString(),
         logo: 'brand3',
         location: 'Israel',
-      },
+      }
     ], {});
   },
 
