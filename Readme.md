@@ -5,7 +5,7 @@
 # Installation
 1. Run ```npm i``` for installing project dependency
 2. Create database
-3. Create config.json in config directory with such format 
+3. Create config.json in **config** directory with such format 
 ```
 {
   "development": {
@@ -15,8 +15,8 @@
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
-   "development": {
-    "username": "username",
+   "test": {
+    "production": "username",
     "password": "password",
     "database": "dbName",
     "host": "127.0.0.1",
@@ -36,16 +36,14 @@
 6. Run ```npm run start``` for start server
 
 # Routes
-1. Purchases
+## Purchases
+##### Method: GET URL: http://localhost:3000/api/v1/purchase 
+##### Method: POST URL: http://localhost:3000/api/v1/purchase {category, amount, userId}
+##### Method: PATCH URL: http://localhost:3000/api/v1/purchase/:userId {name, price, id}
+##### Method: GET URL: http://localhost:3000/api/v1/purchase/:userId {id}
 
-Method: GET URL: http://localhost:3000/api/v1/purchase 
-Method: POST URL: http://localhost:3000/api/v1/purchase {category, amount, userId}
-Method: PATCH URL: http://localhost:3000/api/v1/purchase/:userId {name, price, id}
-Method: GET URL: http://localhost:3000/api/v1/purchase/:userId {id}
-
-2. Items
-
-Method: GET URL: http://localhost:3000/api/v1/item 
-Method: POST URL: http://localhost:3000/api/v1/item {name, price, brandId, purchaseId, filename}
-Method: PATCH URL: http://localhost:3000/api/v1/item/:purchaseId {name, price, id}
-Method: GET URL: http://localhost:3000/api/v1/item/:purchaseId {id}
+## Items
+##### Method: GET URL: http://localhost:3000/api/v1/item 
+##### Method: POST URL: http://localhost:3000/api/v1/item {name, price, brandId, purchaseId, filename}
+##### Method: PATCH URL: http://localhost:3000/api/v1/item/:purchaseId {name, price, id}
+##### Method: GET URL: http://localhost:3000/api/v1/item/:purchaseId {id}
