@@ -65,12 +65,12 @@ module.exports = {
   async update(req, res) {
     try {
       const { itemId, } = req.params;
-      const { name, price, } = req.body;
+      const { name, price, fileLink,} = req.body;
       const item = await query.findByPkItem(itemId);
 
       if (!item) return res.status(404).send('Item not found');
 
-      await query.updateItem(item, name, price);
+      await query.updateItem(item, name, price, fileLink);
 
       return res.sendStatus(200);
     }

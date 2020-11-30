@@ -31,10 +31,11 @@ module.exports = {
     return Item.findByPk(id);
   },
 
-  updateItem(item, name, price) {
+  updateItem(item, name, price, fileLink) {
     return item.update({
       name,
       price,
+      logo: fileLink,
     });
   },
 
